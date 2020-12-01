@@ -1,0 +1,50 @@
+.channels{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 200px;
+    height: 100%;
+    background-color: darkgrey;
+}
+
+.members{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 100%;
+    background-color: darkgrey;
+}
+
+.messages{
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    right: 200px;
+    bottom: 0px;
+    background-color: gray;
+}
+
+.messageSendingBox{
+    position: fixed;
+    bottom: 0px;
+    left: 200px;
+    right: 200px;
+}
+
+#msgSendingTextInput{
+    width: 100%;
+    resize: none;
+}
+
+.messageSendFormTable{
+    width: 100%;
+}
+
+#sendMsgBtn{
+    height: 30px;
+}
+
+#channelList, #messages, #memberList{
+    list-style: none;
+}

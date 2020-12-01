@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Сообщения</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/app.css"/>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/autoresize.js"></script>
+</head>
+<body>
+    <div class="channels">
+        <ul id="channelList">
+            <li>Тут</li>
+            <li>Будут</li>
+            <li>Каналы</li>
+        </ul>
+    </div>
+
+    <div class="messages">
+        <ul id="messages">
+            <li>что</li>
+            <li>вы</li>
+            <li>хотели</li>
+            <li>тут</li>
+            <li>увидеть</li>
+            <li>??????????</li>
+        </ul>
+        <div class="messageSendingBox">
+            <form action="/DatabaseApi/send_message" method="post">
+                <input type="hidden" value="admin" name="login" />
+                <input type="hidden" value="admin" name="password" />
+                <input type="hidden" name="isBrowser" value="true" />
+                <input type="hidden" name="channelId" value="@ViewBag.chId" />
+                <table class="messageSendFormTable">
+                    <tr style="width: 100%;">
+                        <td style="width: 100%;"><textarea name="content" id="msgSendingTextInput" maxlength="2000"></textarea></td>
+                        <td><input type="submit" value="Отправить" id="sendMsgBtn"/></td>
+                    </tr>
+                </table>
+                
+            </form>
+        </div>
+    </div>
+
+    <div class="members">
+        <ul id="memberList">
+            <li>что</li>
+            <li>вы</li>
+            <li>хотели</li>
+            <li>тут</li>
+            <li>увидеть</li>
+            <li>??????????</li>
+        </ul>
+    </div>
+</body>
+</html>
