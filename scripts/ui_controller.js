@@ -1,5 +1,7 @@
 let messages_list_element;
+let messages_div_element;
 let message_container_template;
+let webrtcStatusDisplay;
 
 window.onload=function(){
     init_ui();
@@ -9,6 +11,8 @@ window.onload=function(){
 function init_ui(){
     messages_list_element=document.querySelector('#messages');
     message_container_template = document.querySelector('.message_template');
+    webrtcStatusDisplay=document.querySelector('.webrtcConnectionDisplay');
+    messages_div_element=document.querySelector('.messages');
 }
 
 function add_message(author, content, isNewGroup){
@@ -24,4 +28,14 @@ function add_message(author, content, isNewGroup){
     clone.querySelector('.message_content').innerHTML=content;
     clone.querySelector('.message_author').innerHTML=author;
     messages_list_element.appendChild(clone);
+}
+
+function disconnectBtn_click(){
+    webrtcStatusDisplay.style.display='none';
+    messages_div_element.style.top='0px';
+}
+
+function showConnectionDisplay(){
+    messages_div_element.style.top='250px';
+    webrtcStatusDisplay.style.display='block';
 }

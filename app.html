@@ -6,6 +6,7 @@
     <script src="scripts/autoresize.js"></script>
     <script src="scripts/api.js"></script>
     <script src="scripts/ui_controller.js"></script>
+    <script src="scripts/webcam.js"></script>
 
     <div class="message_template">
         <div class="message_container">
@@ -54,9 +55,13 @@
         </ul>
     </div>
 
+    <div class="top_menu">
+        <span class="top_menu_channel_name">тестовый канал</span>
+    </div>
+
     <div class="webrtcConnectionDisplay">
         <div class="webrtcConnectionDisplayBottomButtons">
-            <button class="webrtcDisconnectButton">ы)</button>
+            <button class="webrtcDisconnectButton" onclick="disconnectBtn_click();">ы)</button>
         </div>
         <video id="cameraStream"></video>
     </div>
