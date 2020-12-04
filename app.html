@@ -33,18 +33,13 @@
         <ul id="messages"></ul>
         <div class="messageSendingBox">
             <div>
-                <input type="hidden" value="admin" name="login" />
-                <input type="hidden" value="admin" name="password" />
-                <input type="hidden" name="isBrowser" value="true" />
-                <input type="hidden" name="channelId" value="@ViewBag.chId" />
                 <table class="messageSendFormTable">
                     <tr style="width: 100%;">
                         <td style="width: 100%;"><textarea name="content" id="msgSendingTextInput" maxlength="2000"></textarea></td>
                         <td><input type="button" value="Отправить" id="sendMsgBtn" onclick="send_message();"/></td>
                     </tr>
                 </table>
-                
-            </form>
+            </div>
         </div>
     </div>
 
