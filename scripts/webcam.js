@@ -6,10 +6,12 @@ window.addEventListener("load", function() {
     camera = document.getElementById("cameraStream")
 }, false);
 
+var localWebcamStream;
+
 async function startCapture() {
-  
     try {
-        camera.srcObject = await navigator.mediaDevices.getUserMedia(constraints);
+        localWebcamStream = await navigator.mediaDevices.getUserMedia(constraints);
+        camera.srcObject=localWebcamStream;
     } catch(err) {
       console.error("Error: " + err);
     }

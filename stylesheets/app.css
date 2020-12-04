@@ -136,6 +136,15 @@
     border: 1px black solid;
 }
 
+.rtcClientVideoElem{
+    width: 160px;
+    height: 90px;
+    position: fixed;
+    right: 210px;
+    top: 200px;
+    border-radius: 5px;
+}
+
 /*Top menu*/
 .top_menu{
     background-color: #606060;

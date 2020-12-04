@@ -7,6 +7,7 @@
     <script src="scripts/api.js"></script>
     <script src="scripts/ui_controller.js"></script>
     <script src="scripts/webcam.js"></script>
+    <script src="scripts/webrtcconnector.js"></script>
 
     <div class="message_template">
         <div class="message_container">
@@ -62,10 +63,14 @@
 
     <div class="webrtcConnectionDisplay">
         <div class="webrtcConnectionDisplayBottomButtons">
-            <button class="webrtcDisconnectButton" onclick="disconnectBtn_click();">ы)</button>
+            <button class="webrtcDisconnectButton" onclick="disconnectBtn_click();">
+                <img src="icons/call_end_button.svg" height="24" />
+            </button>
         </div>
+        <video id="cameraStream" class="rtcClientVideoElem"></video>
         <div class="webrtcMembers">
-            <video id="cameraStream" class="rtcMemberVideoElem"></video>
+            <video id="remoteStream" class="rtcMemberVideoElem"></video>
+            <video id="remoteStream2" class="rtcMemberVideoElem"></video>
         </div>
     </div>
 </body>
