@@ -8,7 +8,7 @@ window.addEventListener("load", function() {
 
 function getUserMedia_success(stream) {
     console.log("getUserMedia_success():", stream);
-    camera.src = stream; // Подключаем медиапоток к HTML-элементу <video>
+    camera.src = URL.createObjectURL(stream); // Подключаем медиапоток к HTML-элементу <video>
 }
 
 function getUserMedia_error(error) {
