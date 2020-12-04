@@ -119,12 +119,20 @@
     border-radius: 32px;
     border-style: none;
     margin: 5px;
+    z-index: 9999;
 }
 
-#cameraStream{
-    z-index: 9999;
-    width: 240px;
-    height: 320px;
+.webrtcMembers{
+    margin-top: -60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.rtcMemberVideoElem{
+    max-width: 100%;
+    max-height: 200px;
+    margin: 10px;
     border: 1px black solid;
 }
 
