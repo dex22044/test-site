@@ -1,10 +1,11 @@
+/*Window*/
 .channels{
     position: fixed;
     top: 0px;
     right: 0px;
     width: 200px;
     height: 100%;
-    background-color: darkgrey;
+    background-color: #666666;
 }
 
 .members{
@@ -13,7 +14,7 @@
     left: 0px;
     width: 200px;
     height: 100%;
-    background-color: darkgrey;
+    background-color: #666666;
 }
 
 .messages{
@@ -22,7 +23,7 @@
     left: 200px;
     right: 200px;
     bottom: 0px;
-    background-color: gray;
+    background-color: #353535;
 }
 
 .messageSendingBox{
@@ -39,6 +40,7 @@
 
 .messageSendFormTable{
     width: 100%;
+    position: fixed;
 }
 
 #sendMsgBtn{
@@ -47,4 +49,73 @@
 
 #channelList, #messages, #memberList{
     list-style: none;
+}
+
+/*Messages*/
+.message_container{
+    display: flex;
+    flex-direction: row;
+    animation: message_deselected 0.2s both;
+}
+
+.message_container:hover{
+    animation: message_selected 0.2s both;
+}
+
+@keyframes message_selected{
+    from{background: rgba(80, 80, 80, 0);}
+    to{background: rgba(80, 80, 80, 1);}
+}
+
+@keyframes message_deselected{
+    from{background: rgba(80, 80, 80, 1);}
+    to{background: rgba(80, 80, 80, 0);}
+}
+
+.message_thumbnail_img{
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+}
+
+.message_content_author{
+    margin-left: 15px;
+}
+
+.message_author{
+    font-weight: bold;
+    color: red;
+}
+
+.message_content{
+    color: darkgrey;
+}
+
+/*WebRTC connection display*/
+.webrtcConnectionDisplay{
+    position: fixed;
+    background-color: #131313;
+    height: 250px;
+    top: 0px;
+    left: 200px;
+    right: 200px;
+}
+
+.webrtcConnectionDisplayBottomButtons{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 170px;
+    left: 200px;
+    right: 200px;
+    justify-content: center;
+}
+
+.webrtcDisconnectButton{
+    background-color: red;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    border-style: none;
+    margin: 5px;
 }

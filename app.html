@@ -6,6 +6,20 @@
     <script src="scripts/autoresize.js"></script>
     <script src="scripts/api.js"></script>
     <script src="scripts/ui_controller.js"></script>
+    <script src="scripts/webcam.js"></script>
+
+    <div class="message_template">
+        <div class="message_container">
+            <img class="message_thumbnail_img" src="https://cdn.discordapp.com/avatars/646770841094193153/3edde28003fc6f80a95fbf1a1f3d124b.webp?size=128"/>
+            <div class="message_content_author">
+                <span class="message_author">dex22044</span>
+                <div class="message_content">
+                    ы)
+                </div>
+            </div>
+        </div>
+    </div>
+
 </head>
 <body>
     <div class="channels">
@@ -17,16 +31,9 @@
     </div>
 
     <div class="messages">
-        <ul id="messages">
-            <li>что</li>
-            <li>вы</li>
-            <li>хотели</li>
-            <li>тут</li>
-            <li>увидеть</li>
-            <li>??????????</li>
-        </ul>
+        <ul id="messages"></ul>
         <div class="messageSendingBox">
-            <form action="/DatabaseApi/send_message" method="post">
+            <div>
                 <input type="hidden" value="admin" name="login" />
                 <input type="hidden" value="admin" name="password" />
                 <input type="hidden" name="isBrowser" value="true" />
@@ -51,6 +58,13 @@
             <li>увидеть</li>
             <li>??????????</li>
         </ul>
+    </div>
+
+    <div class="webrtcConnectionDisplay">
+        <div class="webrtcConnectionDisplayBottomButtons">
+            <button class="webrtcDisconnectButton">ы)</button>
+        </div>
+        <video id="cameraStream"></video>
     </div>
 </body>
 </html>

@@ -1,0 +1,29 @@
+@if (ViewBag.IsAuthorized)
+            {
+                <a class="nav_link" href="/Auth/Profile">
+                    @if (ViewBag.IsAvatarExist)
+                    {
+                        <img src="/Files/GetAvatar" height="32" style="border-radius: 24px; margin-top: 8px;" />
+                    }@ViewBag.User.Nickname
+                    <p style="font-size: 8px">Репутация: @ViewBag.Reputation</p>
+                </a>
+            }
+            else
+            {
+                <button class="nav_link" onclick="window.open('/Auth/Main','_blank')">  <img src="/Files/GetJpgFile?fileString=Content/css/user.png"> Войти</button>
+            }
+
+
+
+
+
+//ы
+                <link rel="stylesheet" type="text/css" href="/Files/GetCssFile?fileString=Content/main.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&f..">
+
+    <link href="/Files/GetCssFile?fileString=Content/bxslider/jquery.bxslider.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="/Files/GetJsFile?fileString=Content/bxslider/jquery.bxslider.min.js"></script>
+    <script src="/Files/GetJsFile?fileString=Content/bxslider/jquery.easing.1.3.js"></script>
+    <script src="/Files/GetJsFile?fileString=Content/bxslider/jquery.fitvids.js"></script>
+    <script src="/Files/GetJsFile?fileString=Content/main.js"></script>

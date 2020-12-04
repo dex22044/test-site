@@ -10,7 +10,7 @@ function autoResize() {
 
 let sendMessageButton;
 
-window.onload=function(){
+function init_autoresize(){
     textarea = document.querySelector("#msgSendingTextInput");
     sendMessageButton=document.querySelector('#sendMsgBtn');
     textarea.addEventListener('input', autoResize, false);
