@@ -1,17 +1,16 @@
 function autoResize() {
-    this.style.height = 'auto';
+    sendMessageDiv.style.height = 'auto';
+    this.style.height='100%';
     if(this.scrollHeight<150)
-        this.style.height = (this.scrollHeight+5) + 'px';
+        sendMessageDiv.style.height = this.scrollHeight + 'px';
     else
-        this.style.height = '150px';
-    
-    sendMessageButton.style.height=this.style.height;
+        sendMessageDiv.style.height = '150px';
 }
 
-let sendMessageButton;
+let sendMessageDiv;
 
 function init_autoresize(){
     textarea = document.querySelector("#msgSendingTextInput");
-    sendMessageButton=document.querySelector('#sendMsgBtn');
+    sendMessageDiv=document.querySelector('.messageSendingBox');
     textarea.addEventListener('input', autoResize, false);
 }

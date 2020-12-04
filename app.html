@@ -12,10 +12,8 @@
         <div class="message_container">
             <img class="message_thumbnail_img" src="https://cdn.discordapp.com/avatars/646770841094193153/3edde28003fc6f80a95fbf1a1f3d124b.webp?size=128"/>
             <div class="message_content_author">
-                <span class="message_author">dex22044</span>
-                <div class="message_content">
-                    ы)
-                </div>
+                <span class="message_author"></span>
+                <div class="message_content"></div>
             </div>
         </div>
     </div>
@@ -33,14 +31,10 @@
     <div class="messages">
         <ul id="messages"></ul>
         <div class="messageSendingBox">
-            <div>
-                <table class="messageSendFormTable">
-                    <tr style="width: 100%;">
-                        <td style="width: 100%;"><textarea name="content" id="msgSendingTextInput" maxlength="2000"></textarea></td>
-                        <td><input type="button" value="Отправить" id="sendMsgBtn" onclick="send_message();"/></td>
-                    </tr>
-                </table>
-            </div>
+            <textarea name="content" id="msgSendingTextInput" maxlength="2000"></textarea>
+            <button id="sendMsgBtn" onclick="send_message();">
+                <img src="icons/send_button.svg" height="24" />
+            </button>
         </div>
     </div>
 
@@ -56,7 +50,12 @@
     </div>
 
     <div class="top_menu">
-        <span class="top_menu_channel_name">тестовый канал</span>
+        <span class="channel_name">тестовый канал</span>
+        <nav class="top_buttons">
+            <button class="call_button" onclick="showConnectionDisplay();getUserMedia_click();">
+                <img src="icons/call_button.svg" height="32"/>
+            </button>
+        </nav>
     </div>
 
     <div class="webrtcConnectionDisplay">
