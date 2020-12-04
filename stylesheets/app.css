@@ -121,6 +121,13 @@
     margin: 5px;
 }
 
+#cameraStream{
+    z-index: 9999;
+    width: 240px;
+    height: 320px;
+    border: 1px black solid;
+}
+
 /*Top menu*/
 .top_menu{
     background-color: #606060;
