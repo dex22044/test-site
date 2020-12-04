@@ -24,23 +24,22 @@
     right: 200px;
     bottom: 0px;
     background-color: #353535;
+    top: 250px;
 }
 
 .messageSendingBox{
+    display: flex;
+    flex-direction: row;
     position: fixed;
-    bottom: 0px;
+    bottom: 10px;
     left: 200px;
     right: 200px;
+    top: auto;
 }
 
 #msgSendingTextInput{
     width: 100%;
     resize: none;
-}
-
-.messageSendFormTable{
-    width: 100%;
-    position: fixed;
 }
 
 #sendMsgBtn{

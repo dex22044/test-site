@@ -38,14 +38,12 @@
                 <input type="hidden" value="admin" name="password" />
                 <input type="hidden" name="isBrowser" value="true" />
                 <input type="hidden" name="channelId" value="@ViewBag.chId" />
-                <table class="messageSendFormTable">
-                    <tr style="width: 100%;">
-                        <td style="width: 100%;"><textarea name="content" id="msgSendingTextInput" maxlength="2000"></textarea></td>
-                        <td><input type="button" value="Отправить" id="sendMsgBtn" onclick="send_message();"/></td>
-                    </tr>
-                </table>
+                <div class="messageSendingBox">
+                        <textarea name="content" id="msgSendingTextInput" maxlength="2000"></textarea>
+                        <input type="button" value="Отправить" id="sendMsgBtn" onclick="send_message();"/>
+                </div>
                 
-            </form>
+            </div>
         </div>
     </div>
 
